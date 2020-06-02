@@ -1,0 +1,5 @@
+package com.avecoder.services;
+
+public class VirusDataService {
+
+}
