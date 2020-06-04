@@ -25,12 +25,7 @@ public class VirusDataService {
 	private static String VIRUS_DATASOURCE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv";
 
 	private List<Location> allStats = new ArrayList<>();
-		
-	public List<Location> getAllStats() {
-		return allStats;
-	}
-
-
+	
 	//fetch the data
 	@PostConstruct
 	// run on a schedule cron ="*sec *min *hour *day *month *year <command>"
@@ -50,6 +45,7 @@ public class VirusDataService {
 			location.setState(record.get("Province/State"));
 			location.setCountry(record.get("Country/Region"));
 			location.setLatestTotalCases(Integer.parseInt(record.get(record.size()-1)));
+			System.out.println(location);
 			newStats.add(location);
 		}
 		this.allStats = newStats;

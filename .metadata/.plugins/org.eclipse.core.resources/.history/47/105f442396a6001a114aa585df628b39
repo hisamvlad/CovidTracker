@@ -10,11 +10,6 @@
 
 <body>
 	
-	<div class="jumbotron">
-  		<h1 class="display-4">Total Cases Reported Worldwide</h1>
-  		<h1 class="display-4" th:text="${totalReportedCases}"></h1>
-	</div>
-	
 	<table>
       <tr>
         <th>State</th>
