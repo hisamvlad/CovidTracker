@@ -1,0 +1,5 @@
+package com.avecoder.controller;
+
+public class HomeController {
+
+}
