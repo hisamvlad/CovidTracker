@@ -49,7 +49,10 @@ public class VirusDataService {
 			Location location = new Location();
 			location.setState(record.get("Province/State"));
 			location.setCountry(record.get("Country/Region"));
-			location.setLatestTotalCases(Integer.parseInt(record.get(record.size()-1)));
+			int latestCases = Integer.parseInt(record.get(record.size()-1));
+			int prevDayCases = Integer.parseInt(record.get(record.size()-2));
+			location.setLatestTotalCases(latestCases);
+			location.setDelta(latestCases - prevDayCases); 
 			newStats.add(location);
 		}
 		this.allStats = newStats;

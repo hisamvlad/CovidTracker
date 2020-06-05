@@ -5,6 +5,7 @@ public class Location {
 	private String state;
 	private String country;
 	private int latestTotalCases;
+	private int delta;
 	
 	public String getState() {
 		return state;
@@ -24,9 +25,17 @@ public class Location {
 	public void setLatestTotalCases(int latestTotalCases) {
 		this.latestTotalCases = latestTotalCases;
 	}
+	
+	public int getDelta() {
+		return delta;
+	}
+	public void setDelta(int delta) {
+		this.delta = delta;
+	}
 	@Override
 	public String toString() {
-		return "Location [state=" + state + ", country=" + country + ", latestTotalCases=" + latestTotalCases + "]";
+		return "Location [state=" + state + ", country=" + country + ", latestTotalCases=" + latestTotalCases
+				+ ", delta=" + delta + "]";
 	}
 	
 	
