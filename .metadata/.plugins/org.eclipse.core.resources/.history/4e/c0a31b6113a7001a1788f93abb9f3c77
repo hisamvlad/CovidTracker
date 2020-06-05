@@ -14,7 +14,7 @@
 	<div class="jumbotron">
   		<h1 class="display-4">Total Cases Reported Worldwide</h1>
   		<h1 class="display-4" th:text="${totalCasesWorldwide}"></h1>
-  		<hr class="my-4">
+  		<hr class="my-4>
   		<p>
   			<span>New cases since previous day</span>
   			<span th:text="${totalNewCases}"</span>
